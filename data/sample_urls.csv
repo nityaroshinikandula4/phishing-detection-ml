@@ -1,0 +1,11 @@
+url,label
+https://www.python.org/downloads/,0
+https://docs.github.com/en/rest,0
+https://www.nau.edu/,0
+https://developer.mozilla.org/en-US/docs/Web/HTTP,0
+https://example.com/account/profile,0
+http://192.0.2.17/login,1
+http://secure-account-verify.example.test/login,1
+http://login-update-account.example.test/verify?password=true,1
+http://xn--paypa-4ve.example.test/signin,1
+http://example.test/download/invoice.zip,1
