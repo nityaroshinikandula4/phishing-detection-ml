@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sentinel explains phishing risk signals in URLs and email messages." />
+  <title>Sentinel — Explainable Phishing Analysis</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script defer src="/static/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#analyzer">Skip to analyzer</a>
+  <header><a class="brand" href="#top"><span>S</span>Sentinel</a><nav aria-label="Primary"><a href="#analyzer">Analyze</a><a href="#method">Method</a><a href="/docs">API</a></nav><p class="status"><i></i>Local demo</p></header>
+  <main id="top">
+    <section class="hero shell">
+      <div><p class="eyebrow">Explainable security signals</p><h1>Pause before<br /><em>you trust the<br />link.</em></h1><p class="lead">Analyze a URL, email message, or both. Sentinel turns suspicious patterns into a clear risk score and human-readable reasons.</p><div class="actions"><a class="button primary" href="#analyzer">Analyze a message</a><button class="button secondary" type="button" data-example>Load risky example</button></div><small>Educational reference implementation. A low score never guarantees safety.</small></div>
+      <div class="risk-card" aria-hidden="true"><div class="window"><span></span><span></span><span></span><b>sentinel.local</b></div><div class="risk-head"><div class="ring"><strong>82</strong><small>risk</small></div><div><h2>High risk</h2><p>5 signals need attention</p></div></div><ul><li>! <span>Look-alike domain pattern</span></li><li>! <span>Credential request detected</span></li><li>! <span>Urgency language detected</span></li></ul></div>
+    </section>
+
+    <section id="analyzer" class="analyzer shell">
+      <div class="section-heading"><div><p class="eyebrow">Interactive analysis</p><h2>Inspect the evidence.</h2></div><p>Inputs remain on this local demo server. Production use would require stronger models, reputation feeds, monitoring, and privacy controls.</p></div>
+      <div class="analysis-grid">
+        <form data-form>
+          <label for="url">URL</label><input id="url" name="url" type="text" inputmode="url" placeholder="https://example.com/account" autocomplete="off" />
+          <label for="emailText">Email or message content</label><textarea id="emailText" name="email_text" rows="9" placeholder="Paste a suspicious message here. Do not use confidential content on a server you do not control."></textarea>
+          <div class="form-actions"><button class="button primary" type="submit">Analyze safely</button><button class="clear" type="reset">Clear</button></div><p class="form-error" role="alert" data-error></p>
+        </form>
+        <section class="result" aria-live="polite" data-result>
+          <div class="empty"><span>↗</span><h3>Evidence appears here.</h3><p>Sentinel does not visit the URL. It reviews lexical structure and message language only.</p></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="method" class="method shell"><div><p class="eyebrow">Method</p><h2>Transparent by design.</h2></div><div class="method-grid"><article><span>01</span><h3>Extract</h3><p>Normalize the URL, inspect the hostname and path, and count language patterns without opening the destination.</p></article><article><span>02</span><h3>Explain</h3><p>Return each matched signal with a plain-language reason rather than hiding the decision behind a label.</p></article><article><span>03</span><h3>Act</h3><p>Suggest proportionate next steps while clearly stating that heuristic output is not a safety guarantee.</p></article></div></section>
+  </main>
+  <footer class="shell"><span>Sentinel · Portfolio reference implementation</span><a href="https://github.com/nityaroshinikandula4/phishing-detection-ml">GitHub ↗</a></footer>
+</body>
+</html>

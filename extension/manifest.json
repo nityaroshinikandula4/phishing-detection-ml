@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Sentinel Link Check",
+  "version": "1.0.0",
+  "description": "Checks the active tab URL against a locally running Sentinel API.",
+  "permissions": ["activeTab", "tabs"],
+  "host_permissions": ["http://127.0.0.1:8000/*", "http://localhost:8000/*"],
+  "action": {"default_popup": "popup.html", "default_title": "Analyze active URL"}
+}
